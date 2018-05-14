@@ -1,0 +1,78 @@
+
+* {
+	box-sizing: border-box;
+	vertical-align: top;
+}
+
+#cookies {
+	cursor: pointer;
+}
+
+html {
+	background-color: #988178;
+}
+
+.cookieBusterList {
+	list-style: none;
+	padding-left: 10px;
+}
+
+.cookieBusterList li {
+	min-height: 26px;
+	list-style: none;
+	padding-left: 10px;
+}
+
+.cookieBusterToggle label {
+	display: block;
+	height: 24px;
+	cursor: pointer;
+	line-height: 22px;
+}
+
+.cookieBusterToggle input {
+	display: none;
+}
+
+.cookieBusterToggle input[type="checkbox"]:checked + label::after {
+	background-color: #0C0;
+	background-position: 18px center;
+}
+
+.cookieBusterToggle label::before {
+	 content: attr(data-cookie);
+
+	position: relative;
+	top: 0;
+	display: inline-block;
+	height: 24px;
+	z-index: 1;
+
+
+	padding: 0 10px 0 30px;
+	border-radius: 0 100px 100px 0;
+	background-color: rgba(0, 0, 0, .75);
+	font-size: 14px;
+	line-height: 24px;
+	color: #FFF;
+ }
+
+
+.cookieBusterToggle label::after {
+	content: '';
+	float: left;
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	width: 40px;
+	height: 24px;
+	border-radius: 100px;
+	margin-right: -20px;
+	background-image: url(cookie.svg);
+	background-repeat: no-repeat;
+	background-color: #C00;
+	background-position: 2px center;
+	background-size: 20px 20px;
+	transition: background-color .25s, background-position .25s;
+	box-shadow: inset 0 0 5px black;
+ }

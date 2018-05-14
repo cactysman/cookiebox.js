@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>CookieBuster</title>
+
+		<link href="cookieBuster.css" type="text/css" rel="stylesheet" />
+		<script src="cookieBuster.js">
+			window.CookieBoxSettings = {
+				throw: false,
+				quiet: true,
+				definitions: {
+					ga: {
+						name: 'Google Analytics',
+						cookies: {
+							_ga: {
+								description: 'Used to distinguish users (2 years)'
+							},
+							_gid: {
+								description: 'Used to distinguish users (24 hours)'
+							},
+							_gat: {
+								description: 'Used to throttle request rate.'
+							}
+						}
+					},
+					other: {
+						name: 'Other',
+						cookies: {
+							PHPSESSID: {
+								description: 'PHP session'
+							},
+							aaaa: {
+								description: 'Random cookie'
+							}
+						}
+					}
+				}
+			}
+		</script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	</head>
+	<body>
+		<template id="cookieBusterConfigurator">
+			<div style="text-align: left;">
+				<p>Please select which cookies you want to accept from this website.</p>
+				<div>
+					<h4>Google Analytics</h4>
+					<ul class="cookieBusterList">
+						<li class="cookieBusterToggle">
+							<input id="cookieBusterToggle--_ga" type="checkbox" name="_ga" />
+							<label for="cookieBusterToggle--_ga" data-cookie="_ga">
+								Used to distinguish users - 2 years
+							</label>
+						</li>
+						<li class="cookieBusterToggle">
+							<input id="cookieBusterToggle--_gid" type="checkbox" name="_gid" />
+							<label for="cookieBusterToggle--_gid" data-cookie="_gid">
+								Used to distinguish users - 24 hours
+							</label>
+						</li>
+						<li class="cookieBusterToggle">
+							<input id="cookieBusterToggle--_gat" type="checkbox" name="_gat" />
+							<label for="cookieBusterToggle--_gat" data-cookie="_gat">
+								Used to throttle request rate.
+							</label>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h4>Other</h4>
+					<ul class="cookieBusterList">
+						<li class="cookieBusterToggle">
+							<input id="cookieBusterToggle--PHPSESSID" type="checkbox" name="PHPSESSID" />
+							<label for="cookieBusterToggle--PHPSESSID" data-cookie="PHPSESSID">
+								PHP Session
+							</label>
+						</li>
+						<li class="cookieBusterToggle">
+							<input id="cookieBusterToggle--aaaa" type="checkbox" name="aaaa" />
+							<label for="cookieBusterToggle--aaaa" data-cookie="aaaa">
+								Random cookie
+							</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</template>
+
+		<script src="test.js" ></script>
+	</body>
+</html>
