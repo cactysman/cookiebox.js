@@ -1,0 +1,21 @@
+{
+  "name": "cookieBox",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Metaa <npm@metaa.io> (https://metaa.io/)",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "^10.0.9",
+    "deepmerge": "^2.1.0",
+    "ts-loader": "^4.3.0",
+    "typescript": "^2.8.3",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  },
+  "dependencies": {}
+}
