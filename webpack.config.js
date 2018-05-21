@@ -1,4 +1,5 @@
-const path = require('path');
+const path = require('path')
+	, pgkInfo = require('./package')
 
 module.exports = {
 	entry: './src/index.ts',
@@ -19,8 +20,8 @@ module.exports = {
 		]
 	},
 	output: {
-		filename: 'cookieBox.js',
+		filename: `${pgkInfo.name}-${pgkInfo.version}.js`,
 		path: path.resolve(__dirname, 'dist')
 	},
 	mode: 'production'
-};
+}
