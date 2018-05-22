@@ -6,6 +6,7 @@ import { Util } from './Util'
 export module Ui {
 	export const generateToggleList = (target: HTMLFormElement | Document = document) => {
 		const createOnElement = (form: HTMLFormElement) => {
+			const now = new Date().getTime()
 			let introElement: HTMLElement
 
 			if(CookieBox.options.list.intro) {
@@ -15,7 +16,7 @@ export module Ui {
 
 					introElement = p
 				} else if(CookieBox.options.list.intro && HTMLElement.isPrototypeOf(CookieBox.options.list.intro.constructor)) {
-					introElement = CookieBox.options.list.intro
+					introElement = <HTMLElement> CookieBox.options.list.intro
 				}
 			}
 
@@ -51,11 +52,13 @@ export module Ui {
 							<ul>
 							${group.map((cookie: ICookieDenial) => `
 								<li>
-									<label>
-										<input type="checkbox"
-										       name="${cookie.name}"
-										       ${CookieBox.interceptor.whitelist.isValid(cookie.name) ? 'checked' : ''}
-										/>
+									<input type="checkbox"
+									       id="c-${cookie.name}-${now}"
+									       name="${cookie.name}"
+									       ${CookieBox.interceptor.whitelist.isValid(cookie.name) ? 'checked' : ''}
+									/>
+									<label for="c-${cookie.name}-${now}">
+										<var>${cookie.name}</var>
 										<span>${cookie.description}</span>
 									</label>
 								</li>
@@ -70,12 +73,14 @@ export module Ui {
 					form.appendChild(fieldset)
 				})
 
-			const submit: HTMLButtonElement = document.createElement('button')
-			submit.textContent = CookieBox.options.list.submit.text
-			submit.addEventListener('click', () => {
-				form.dispatchEvent(new Event('submit'))
-			})
-			form.appendChild(submit)
+			if(CookieBox.options.list.submit.enabled) {
+				const submit: HTMLButtonElement = document.createElement('button')
+				submit.textContent = CookieBox.options.list.submit.text
+				submit.addEventListener('click', () => {
+					form.dispatchEvent(new Event('submit'))
+				})
+				form.appendChild(submit)
+			}
 
 			form.addEventListener('submit', event => {
 				if(!CookieBox.options.list.submit.reload) {

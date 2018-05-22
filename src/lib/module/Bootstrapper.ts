@@ -15,13 +15,15 @@ export module Bootstrapper {
 			Ui.generateToggleList()
 		})
 
-		if(!Util.getCookie(CookieBox.names.whitelistCookie, CookieBox.interceptor.raw) && CookieBox.options.callbacks.initialVisit) {
-			CookieBox.options.callbacks.initialVisit()
+		const callbackOptions = CookieBox.options.callbacks
+		console.log(Util.getCookie(CookieBox.names.whitelistCookie, CookieBox.interceptor.raw))
+		if(!Util.getCookieObject(CookieBox.names.whitelistCookie, CookieBox.interceptor.raw) && callbackOptions.initialVisit) {
+			callbackOptions.initialVisit()
 				.then(() => {
-					CookieBox.options.callbacks.afterSetup(true)
+					callbackOptions.afterSetup(true)
 				})
 		} else {
-			CookieBox.options.callbacks.afterSetup(false)
+			callbackOptions.afterSetup(false)
 		}
 	}
 

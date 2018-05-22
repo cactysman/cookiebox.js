@@ -5,7 +5,7 @@ import ICookieBoxOptions from './interface/ICookieBoxOptions'
 
 export namespace CookieBox {
 	export const
-		dev: boolean = true,
+		dev: boolean = false,
 		names = {
 			settingsObject: 'CookieBoxOptions',
 			whitelistCookie: '__cookieBoxWhitelist',
@@ -29,15 +29,18 @@ export namespace CookieBox {
 			list: {
 				intro: 'Please set up your preferences regarding cookies on this website.',
 				submit: {
-					text: 'I agree',
+					enabled: true,
+					text: 'Save',
 					reload: false
 				}
 			},
 			whitelist: {
 				expiry: 365.25 * 24 * 60 * 60,
 				path: '/',
-				inheritAllowed: false,
-				keepDenied: false
+				updates: {
+					inheritAllowed: false,
+					keepDenied: false
+				}
 			},
 			definitions: {
 				deny: {

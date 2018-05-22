@@ -76,7 +76,7 @@ export class Interceptor {
 		const cookieObj = Util.parseCookieString(input)
 
 		if(!this.whitelist.isValid(cookieObj.name)) {
-			if(CookieBox.options.observability.verbose) {
+			if(!CookieBox.options.observability.hide && !CookieBox.options.observability.quiet && CookieBox.options.observability.verbose) {
 				console.info(`Something tried to set cookie "${cookieObj.name}".`)
 			}
 
@@ -132,7 +132,7 @@ export class Interceptor {
 	public allow(cookieName: string): void {
 		this.whitelist.allow(cookieName)
 
-		if(CookieBox.options.whitelist.inheritAllowed) {
+		if(CookieBox.options.whitelist.updates.inheritAllowed) {
 			if(this.pseudo[cookieName]) {
 				this.cookie = Util.cookieToString(this.pseudo[cookieName], true)
 			}
@@ -144,7 +144,7 @@ export class Interceptor {
 	}
 
 	public deny(cookieName: string): void {
-		if(CookieBox.options.whitelist.keepDenied) {
+		if(CookieBox.options.whitelist.updates.keepDenied) {
 			this.pseudo[cookieName] = Util.getCookieObject(cookieName)
 		}
 
