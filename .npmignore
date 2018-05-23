@@ -1,4 +1,6 @@
-tsconfig.json
-webpack.config.js
 example/
 src/
+
+tsconfig.json
+webpack.config.js
+.idea/
