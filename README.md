@@ -50,6 +50,14 @@ for an additional cookie banner or similar.>
 > see: [Configuration](doc/Configuration.md)
 
 ## Behaviours and trivia
+### Spawning a list
+You can use `document.createElement('cookieboxlist')` to spawn a new
+cookie toggle list and place that on your website or in a fancy popup
+like the [example](#example) does.
+
+You can also render that HTML structure yourself with something else
+(like a CMS) and **CookieBox** will find and use it!
+
 ### "Paranoia mode"
 **CookieHandler** has options that can advise it to hide itself. This is
 supposed to be a way to prevent newer embeddable tools from noticing
