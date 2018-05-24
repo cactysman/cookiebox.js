@@ -1,0 +1,135 @@
+.cookie-box--form {
+	text-align: left;
+}
+
+	.cookie-box--form header {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+
+		border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+	}
+
+		.cookie-box--form header p:last-of-type {
+			margin-bottom: 0;
+		}
+
+	.cookie-box--form ul {
+		list-style: none;
+		padding-left: 10px;
+	}
+
+		.cookie-box--form ul li:not(:first-child) {
+			margin-top: 20px;
+			padding-top: 20px;
+
+			border-top: 1px solid rgba(0, 0, 0, 0.125);
+		}
+			.cookie-box--form ul li > input {
+				display: none;
+			}
+
+			.cookie-box--form ul li > label {
+				display: block;
+				cursor: pointer;
+			}
+
+				.cookie-box--form ul li > label > var {
+					position: relative;
+					vertical-align: top;
+
+					display: inline-block;
+					height: 24px;
+
+					padding: 0 10px 0 45px;
+
+					border-radius: 100px;
+					background-image: linear-gradient(to right, transparent 30px, rgba(0, 0, 0, .75) 30px);
+
+					color: #FFF;
+					font-size: 14px;
+					line-height: 24px;
+					user-select: none;
+				}
+
+					.cookie-box--form ul li > label var::before {
+						content: '';
+
+						position: absolute;
+						left: 0;
+						top: 0;
+
+						display: inline-block;
+						width: 40px;
+						height: 24px;
+						margin-right: -20px;
+
+						border-radius: 100px;
+						background-color: #C00;
+						box-shadow: inset 0 0 5px black;
+
+						transition: background-color .5s, background-position .5s;
+					}
+
+					.cookie-box--form ul li > input:checked + label var::before {
+						background-color: #0C0;
+					}
+
+					.cookie-box--form ul li > label var::after {
+						content: '';
+
+						position: absolute;
+						left: 0;
+						top: 0;
+
+						display: inline-block;
+						width: 24px;
+						height: 24px;
+
+						background: transparent url(cookie.svg) 2px / 20px no-repeat;
+
+						transition: transform .5s;
+						transform: translateX(0) rotateZ(0);
+					}
+
+					.cookie-box--form ul li > input:checked + label var::after {
+						transform: translateX(16px) rotateZ(72deg)
+					}
+
+				.cookie-box--form ul li > label > var + span {
+					display: block;
+					margin-top: 10px;
+				}
+
+@media screen and (max-width: 520px) {
+	.cookie-box--form ul li > label > var {
+		display: block;
+	}
+}
+
+#cookieRoll {
+	position: fixed;
+	left: 16px;
+	bottom: 16px;
+	z-index: 1;
+
+	display: block;
+	width: 64px;
+	height: 64px;
+
+	background-image: url(cookie.svg);
+	background-size: 100%;
+
+	cursor: pointer;
+	transform: translateX(-125%) rotateZ(0);
+	transition: transform .5s;
+}
+
+#cookieRoll.show {
+	transform: translateX(0) rotateZ(112.5deg);
+}
+
+#github {
+	position: fixed;
+	right: 16px;
+	bottom: 16px;
+}

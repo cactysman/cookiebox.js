@@ -1,0 +1,37 @@
+{
+  "name": "cookiebox",
+  "version": "0.0.0",
+  "description": "Only serve the cookies your visitors order!",
+  "keywords": [
+    "GDPR",
+    "cookies",
+    "whitelist"
+  ],
+  "homepage": "https://github.com/metaa/cookiebox#readme",
+  "bugs": {
+    "url": "https://github.com/metaa/cookiebox/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Metaa",
+    "email": "npm@metaa.io",
+    "url": "https://metaa.io/"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metaa/cookiebox.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^10.0.9",
+    "deepmerge": "^2.1.0",
+    "ts-loader": "^4.3.0",
+    "typescript": "^2.8.3",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  }
+}
