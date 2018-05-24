@@ -1,4 +1,4 @@
-# CookieBox v1.0 [![NPM version](https://img.shields.io/npm/v/cookiebox.svg)](https://www.npmjs.com/package/cookiebox) <img align="right" src="doc/img/logo.png" />
+# CookieBox v1.0 [![NPM version](https://img.shields.io/npm/v/cookiebox.js.svg)](https://www.npmjs.com/package/cookiebox.js) <img align="right" src="doc/img/logo.png" />
 > Only serve the cookies your visitors order!
 
 ## The intention
@@ -76,7 +76,7 @@ There are two ways to use **CookieBox**:
 1.	Use [NPM](https://www.npmjs.com/) and install it as follows:
 
 	```shell
-	npm install --save cookie-box
+	npm install --save cookiebox.js
 	```
 
 	Then use whatever tool or framework to either the generated or the
