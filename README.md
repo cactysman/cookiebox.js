@@ -68,7 +68,7 @@ visitors' privacy.
 
 
 ## Example
-> see: [Example](example/index.html)
+> see: [Example](examples/simple/) | [Live demo](https://metaa.github.io/cookiebox/)
 
 
 ## Installation
