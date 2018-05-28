@@ -20,7 +20,7 @@ module.exports = {
 		]
 	},
 	output: {
-		filename: `${pgkInfo.name}-${pgkInfo.version}.js`,
+		filename: `cookiebox-${pgkInfo.version}.js`,
 		path: path.resolve(__dirname, 'dist')
 	},
 	mode: 'production'
