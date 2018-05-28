@@ -18,7 +18,8 @@ export namespace CookieBox {
 			active: true,
 			callbacks: {
 				initialVisit: () => new Promise((resolve: () => any) => resolve()),
-				afterSetup: () => {}
+				afterSetup: () => {},
+				filled: () => {}
 			},
 			observability: {
 				hide: false,

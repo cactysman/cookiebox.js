@@ -15,11 +15,18 @@
 
 		Gets called when the visitor does not hold a whitelist cookie
 		(so it most likely is their first visit).
+		
 	*	`afterSetup` (**function(initial: boolean)**):
 
 		Gets called after either the **CookieBox** whitelist was
 		configured on the visitor's initial visit or when they load the
 		page but it's not the first time.
+		
+	*	`filled` (**function(form: HTMLFormElement)**):
+
+		Gets called after a **CookieBox** form was created either
+		through `document.createElement('cookieboxlist')` or DOM
+		contents with the `cookie-box--form` class.
 
 *	`definitions` (**object**):
 

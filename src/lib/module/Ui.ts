@@ -89,6 +89,8 @@ export module Ui {
 
 				updateWhitelist(form)
 			})
+
+			CookieBox.options.callbacks.filled(form)
 		}
 
 		if(target instanceof Document) {

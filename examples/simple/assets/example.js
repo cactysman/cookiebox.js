@@ -69,6 +69,9 @@ CookieBoxOptions = {
 			setTimeout(function() {
 				cookieBoxExample.rollCookie();
 			}, 0);
+		},
+		filled: function(form) {
+			console.log(form, 'filled!')
 		}
 	},
 	observability: {

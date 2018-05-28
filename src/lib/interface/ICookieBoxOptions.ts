@@ -5,7 +5,8 @@ export default interface ICookieBoxOptions {
 	active?: boolean
 	callbacks?: {
 		initialVisit?: () => Promise<any>
-		afterSetup?: (initial: boolean) => any
+		afterSetup?: (initial: boolean) => any,
+		filled?: (form: HTMLFormElement) => any
 	}
 	definitions?: {
 		allow?: string[]
