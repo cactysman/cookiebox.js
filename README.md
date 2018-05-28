@@ -1,4 +1,4 @@
-# CookieBox v1.0 [![NPM version](https://img.shields.io/npm/v/cookiebox.js.svg)](https://www.npmjs.com/package/cookiebox.js) <img align="right" src="doc/img/logo.png" />
+# C🍪🍪kieBox.js [![NPM version](https://img.shields.io/npm/v/cookiebox.js.svg)](https://www.npmjs.com/package/cookiebox.js) <img align="right" src="doc/img/logo.png" />
 > Only serve the cookies your visitors order!
 
 ## The intention
@@ -79,7 +79,7 @@ visitors' privacy.
 
 
 ## Example
-> see: [Example](examples/simple/) | [Live demo](https://metaa.github.io/cookiebox/)
+> see: [Example](examples/simple/) | [Live demo](https://metaa.github.io/cookiebox.js)
 
 
 ## Installation

@@ -154,7 +154,7 @@ There are 5 cookie denial behaviours available to choose from. Although
 they will not get saved to the disk as they woul be if **CookieBox**
 wasn't active, some of the behaviours also house special treatments.
 
-*	`deny`
+*	🚫 `deny`
 
 	The cookie is denied and, according to the configuration options,
 	**CookieBox** will either throw an
@@ -162,18 +162,18 @@ wasn't active, some of the behaviours also house special treatments.
 	[*log an error*](https://developer.mozilla.org/docs/Web/API/Console/error)
 	to the error stream or do nothing at all.
 
-*	`drop`
+*	🚮 `drop`
 
 	The cookie will simply be dropped.
 
-*	`blank`
+*	❓ `blank`
 
 	The cookie *will* be saved, although the value will be blank.
 	
 	The full cookie will be saved in the
 	[pseudo storage](#pseudo-storage) though.
 
-*	`ghost`
+*	👻 `ghost`
 
 	The cookie will only be saved in the
 	[pseudo storage](#pseudo-storage). 

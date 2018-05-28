@@ -7,9 +7,9 @@
     "cookies",
     "whitelist"
   ],
-  "homepage": "https://github.com/metaa/cookiebox#readme",
+  "homepage": "https://github.com/metaa/cookiebox.js#readme",
   "bugs": {
-    "url": "https://github.com/metaa/cookiebox/issues"
+    "url": "https://github.com/metaa/cookiebox.js/issues"
   },
   "license": "MIT",
   "author": {
@@ -20,7 +20,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/metaa/cookiebox.git"
+    "url": "git+https://github.com/metaa/cookiebox.js.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

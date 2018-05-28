@@ -16,7 +16,6 @@ export module Bootstrapper {
 		})
 
 		const callbackOptions = CookieBox.options.callbacks
-		console.log(Util.getCookie(CookieBox.names.whitelistCookie, CookieBox.interceptor.raw))
 		if(!Util.getCookieObject(CookieBox.names.whitelistCookie, CookieBox.interceptor.raw) && callbackOptions.initialVisit) {
 			callbackOptions.initialVisit()
 				.then(() => {
