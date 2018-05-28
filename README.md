@@ -58,6 +58,17 @@ like the [example](#example) does.
 You can also render that HTML structure yourself with something else
 (like a CMS) and **CookieBox** will find and use it!
 
+### Seeding to a custom DOM element
+**CookieBox** will fill every element HTMLFormElement with the class
+`cookie-box--form` with a list that contains what you configured it for.
+
+So you can put this wherever on your website and it will get set up and
+work!
+
+```html
+<form class="cookie-box--form"></form>
+```
+
 ### "Paranoia mode"
 **CookieHandler** has options that can advise it to hide itself. This is
 supposed to be a way to prevent newer embeddable tools from noticing
